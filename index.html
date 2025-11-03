@@ -1,19 +1,108 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ONG Exemplo — Transformando Vidas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entrega II - Demo</title>
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="Junte-se_a_Causa.png" alt="Junte-se à nós" style="max-width:100%;height:auto;">
-    <h1>ONG Exemplo</h1>
+  <header style="background:var(--color-bg); padding:var(--sp-16) 0;">
+    <div class="container">
+      <nav style="position:relative;">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <div style="display:flex; gap:12px; align-items:center;">
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+            <a href="#" class="brand">MeuProjeto</a>
+          </div>
+          <div class="nav-inner">
+            <ul style="display:flex; gap:12px; list-style:none; margin:0; padding:0;">
+              <li><a href="#">Home</a></li>
+              <li style="position:relative;">
+                <a href="#">Projetos ▾</a>
+                <ul style="position:absolute; display:none; list-style:none; padding:8px 0; margin:0; background:var(--color-surface); box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+                  <li><a href="#">Web</a></li>
+                  <li><a href="#">Mobile</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Missão</h2>
-    <p>Transformar vidas por meio da solidariedade e engajamento social.</p>
+
+  <main class="container" style="padding:var(--sp-24) 0;">
+    <section class="hero">
+      <div>
+        <h1>Interface profissional e responsiva</h1>
+        <p>Este arquivo demonstra os componentes exigidos na entrega: grids, cards, botões, formulário, modal e toasts.</p>
+        <div class="component-row" style="margin-top:16px;">
+          <button class="btn btn-primary" data-toast="Ação executada!">Mostrar Toast</button>
+          <button class="btn" data-modal-open="modal-example">Abrir Modal</button>
+          <button class="btn" disabled>Disabled</button>
+        </div>
+      </div>
+      <aside>
+        <div class="card">
+          <h3>Resumo</h3>
+          <p>Exemplo de card lateral.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="features">
+      <div class="card"><h4>Feature 1</h4><p>Descrição</p></div>
+      <div class="card"><h4>Feature 2</h4><p>Descrição</p></div>
+      <div class="card"><h4>Feature 3</h4><p>Descrição</p></div>
+      <div class="card"><h4>Feature 4</h4><p>Descrição</p></div>
+    </section>
+
+    <section>
+      <h2>Projetos</h2>
+      <div class="card-grid">
+        <div class="card"><h4>Projeto A</h4><p>Detalhes</p><span class="badge">HTML</span></div>
+        <div class="card"><h4>Projeto B</h4><p>Detalhes</p><span class="badge badge-success">CSS</span></div>
+        <div class="card"><h4>Projeto C</h4><p>Detalhes</p><span class="badge badge-info">JS</span></div>
+      </div>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2>Formulário</h2>
+      <form class="card" style="display:grid; gap:12px; max-width:560px;">
+        <label>Nome<input type="text" required placeholder="Seu nome"></label>
+        <label>Email<input type="email" required placeholder="seu@email.com"></label>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <button class="btn" type="reset">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2>Artigos</h2>
+      <div class="article-grid">
+        <article class="card"><h4>Título 1</h4><p>Resumo...</p></article>
+        <article class="card"><h4>Título 2</h4><p>Resumo...</p></article>
+        <article class="card"><h4>Título 3</h4><p>Resumo...</p></article>
+      </div>
+    </section>
   </main>
-  <footer>© 2025 ONG Exemplo</footer>
+
+  <div class="modal-backdrop" aria-hidden="true">
+    <div id="modal-example" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header"><div class="modal-title" id="modal-title">Exemplo de Modal</div><button data-modal-close aria-label="Fechar">✕</button></div>
+      <div class="modal-body">Este é um modal de exemplo. Use-o para confirmar ações ou mostrar informações importantes.</div>
+      <div class="modal-actions"><button class="btn" data-modal-close>Cancelar</button><button class="btn btn-primary" data-modal-close>Confirmar</button></div>
+    </div>
+  </div>
+
+  <div class="toast-wrap" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>

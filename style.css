@@ -1,0 +1,30 @@
+/* ==========================
+   style.css
+   ========================== */
+
+/* Importa todos os módulos CSS */
+@import url('variables.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* Estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-primary-dark);
+}

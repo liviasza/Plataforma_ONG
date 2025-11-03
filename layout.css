@@ -1,0 +1,117 @@
+/* ==========================
+   layout.css
+   ========================== */
+
+.container {
+  width: min(90%, var(--container-width));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--gutter);
+}
+
+header, footer {
+  grid-column: 1 / -1;
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-3);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-2);
+}
+
+/* Menu dropdown */
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+/* Menu responsivo */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  nav.active ul {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Breakpoints adicionais */
+@media (max-width: 1200px) {}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+@media (max-width: 576px) {}
+@media (max-width: 400px) {}
+
+
+/* ===== Specific content layouts ===== */
+/* Hero + two-column content */
+.hero {
+  display:grid;
+  grid-template-columns: 1fr 480px;
+  gap: var(--sp-24);
+  align-items: center;
+  padding: var(--sp-32) 0;
+}
+@media (max-width: 992px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
+/* Feature grid (4-column) */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-16);
+  margin: var(--sp-24) 0;
+}
+@media (max-width: 992px) {
+  .features { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .features { grid-template-columns: 1fr; }
+}
+
+/* Utility to show/hide the mobile nav */
+.menu-toggle { display:none; cursor:pointer; background:none; border:0; }
+@media (max-width: 768px) {
+  .menu-toggle { display:block; }
+  nav .nav-inner { display:none; }
+  nav.active .nav-inner { display:block; position:absolute; top:64px; left:0; right:0; background: var(--color-surface); padding: var(--sp-16); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+}
+
+/* Simple grid example for article listing */
+.article-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-16); }
+@media (max-width: 992px) { .article-grid { grid-template-columns: repeat(2,1fr);} }
+@media (max-width: 576px) { .article-grid { grid-template-columns: 1fr; } }
