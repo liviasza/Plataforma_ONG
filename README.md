@@ -1,55 +1,52 @@
-# 🌐 Plataforma ONG — Entrega II (CSS3)
-
-## 🎯 Objetivo da Entrega
-Esta segunda entrega tem como foco a **aplicação de CSS3** para transformar a estrutura HTML desenvolvida na **Entrega I** em uma **interface visual moderna, responsiva e acessível**, aplicando os princípios de **Design System**, **Grid/Flexbox** e **componentização visual**.
+Perfeito 👍
+Aqui está o **README unificado**, combinando o conteúdo das entregas II (CSS3) e III (JavaScript Avançado) em um único arquivo coeso e formatado:
 
 ---
 
-## 🧩 **1. Sistema de Design**
+# 🌐 Plataforma ONG — Entregas II e III
 
-- Variáveis CSS customizadas para facilitar a manutenção do tema.  
-- Paleta de **8 cores** (primárias, secundárias e neutras).  
-- Hierarquia tipográfica com **5 tamanhos de fonte**.  
-- Sistema de espaçamento modular (8px, 16px, 24px, 32px, 48px, 64px).  
+## 🎯 Objetivo Geral
 
-📄 Arquivo principal: `css/variables.css`
+O projeto **Plataforma ONG** tem como objetivo criar uma aplicação web moderna, acessível e interativa, que conecta pessoas a causas sociais.
+Nas entregas II e III, foram aplicadas as tecnologias **CSS3** e **JavaScript Avançado** para evoluir de uma interface estática para uma **Single Page Application (SPA)** funcional.
 
 ---
 
-## 🧱 **2. Leiaute Responsivo (Grid + Flexbox)**
+## 🧩 **Entrega II — CSS3**
 
-- Estrutura geral construída com **CSS Grid (12 colunas)**.  
-- Componentes internos e seções usando **Flexbox**.  
-- **5 breakpoints** para adaptação em diferentes tamanhos de tela.  
-- Layouts específicos para hero, cards, seções laterais e formulários.  
+### 🎨 Sistema de Design
 
-📄 Arquivo principal: `css/layout.css`
+* Variáveis CSS customizadas para facilitar a manutenção do tema.
+* Paleta de **8 cores** (primárias, secundárias e neutras).
+* Hierarquia tipográfica com **5 tamanhos de fonte**.
+* Sistema de espaçamento modular (8px, 16px, 24px, 32px, 48px, 64px).
+  📄 Arquivo principal: `css/variables.css`
 
----
+### 🧱 Leiaute Responsivo (Grid + Flexbox)
 
-## 🧭 **3. Navegação Interativa**
+* Estrutura geral construída com **CSS Grid (12 colunas)**.
+* Componentes internos e seções usando **Flexbox**.
+* **5 breakpoints** para adaptação em diferentes tamanhos de tela.
+* Layouts específicos para hero, cards, seções laterais e formulários.
+  📄 Arquivo principal: `css/layout.css`
 
-- Menu principal responsivo com **submenu dropdown**.  
-- Navegação mobile com **menu hambúrguer**.  
-- Interatividade implementada via JavaScript.  
+### 🧭 Navegação Interativa
 
-📄 Arquivo JS: `js/script.js`
+* Menu principal responsivo com **submenu dropdown**.
+* Navegação mobile com **menu hambúrguer**.
+* Interatividade inicial implementada via JavaScript.
+  📄 Arquivo JS: `js/script.js`
 
----
+### 💡 Componentes de Interface
 
-## 💡 **4. Componentes de Interface**
+* **Cards responsivos** para exibição de projetos.
+* **Botões com estados visuais** (hover, focus, active, disabled).
+* **Formulários estilizados** com validação visual.
+* **Componentes de feedback** (modals, toasts, alerts).
+* **Badges e tags** para categorização de conteúdo.
+  📄 Arquivo principal: `css/components.css`
 
-- **Cards responsivos** para exibição de projetos.  
-- **Botões com estados visuais** (hover, focus, active, disabled).  
-- **Formulários estilizados** com validação visual.  
-- **Componentes de feedback** (modals, toasts, alerts).  
-- **Badges e tags** para categorização de conteúdo.  
-
-📄 Arquivo principal: `css/components.css`
-
----
-
-## 🗂️ **5. Estrutura de Pastas**
+### 🗂️ Estrutura de Pastas (Entrega II)
 
 ```
 Plataforma_ONG/
@@ -76,32 +73,102 @@ Plataforma_ONG/
 
 ---
 
-## 🖥️ **Como Visualizar o Projeto**
+## ⚙️ **Entrega III — JavaScript Avançado**
+
+### 🔁 SPA (Single Page Application)
+
+Implementação de um sistema de rotas com **hash-router** para navegação dinâmica entre páginas:
+
+* `#/` — Página inicial
+* `#/projetos` — Listagem e cadastro de projetos
+* `#/cadastro` — Formulário de voluntários
+
+📄 Arquivos principais: `index.html`, `js/router.js`, `js/templates.js`
+
+### 🧱 Templates JavaScript
+
+Utilização da tag `<template>` no HTML e renderização dinâmica via JavaScript.
+📄 Arquivo: `js/templates.js`
+
+### 🧮 Manipulação do DOM
+
+Atualização dinâmica de conteúdo sem recarregar a página, exibindo formulários, listas e feedbacks ao usuário.
+
+### ✅ Validação de Formulários
+
+* Verificação de campos obrigatórios e padrões (`pattern`, `email`).
+* Feedback visual de erro e mensagens via **toasts**.
+  📄 Arquivo: `js/validation.js`
+
+### 💾 Armazenamento Local (localStorage)
+
+* Cadastro e persistência de **voluntários** e **projetos** no navegador.
+* Função de limpeza e atualização automática das listas.
+
+### 🧱 Estrutura de Pastas (Entrega III)
+
+```
+Plataforma_ONG/
+│
+├── index.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── main.js
+│   ├── router.js
+│   ├── templates.js
+│   ├── validation.js
+│   ├── cadastro.js
+│   └── projetos.js
+│
+└── README.md
+```
+
+---
+
+## 🖥️ **Como Executar o Projeto**
 
 1. Faça o download do repositório ou clone via Git:
+
    ```bash
    git clone https://github.com/SEU_USUARIO/Plataforma_ONG.git
    ```
-2. Abra o arquivo `index.html` em um navegador moderno.  
-3. Redimensione a janela para testar a **responsividade** e **interatividade** do layout.
+2. Abra o arquivo `index.html` em um navegador moderno (Chrome, Edge ou Firefox).
+3. Navegue pelos menus da SPA (`Home`, `Projetos`, `Cadastro`).
+4. Os dados inseridos são salvos automaticamente no **localStorage**.
+
+💡 *Dica:* Caso queira testar em servidor local:
+
+```bash
+npx http-server
+# ou
+python -m http.server
+```
 
 ---
 
 ## ✅ **Requisitos Atendidos**
 
-| Critério | Situação |
-|-----------|-----------|
-| Sistema de Design (cores, fontes, espaçamento) | ✅ |
-| Leiaute Responsivo (Grid e Flexbox) | ✅ |
-| Menu responsivo e interativo | ✅ |
-| Componentes de interface (cards, botões, modais etc.) | ✅ |
-| Estrutura modular e organizada | ✅ |
+| Critério                                       | Situação |
+| ---------------------------------------------- | -------- |
+| Sistema de Design (cores, fontes, espaçamento) | ✅        |
+| Layout Responsivo (Grid e Flexbox)             | ✅        |
+| Navegação Interativa e Responsiva              | ✅        |
+| Manipulação do DOM (SPA)                       | ✅        |
+| Validação de Formulários                       | ✅        |
+| Armazenamento Local (localStorage)             | ✅        |
+| Código Modular (ES Modules)                    | ✅        |
 
 ---
 
 ## 👩‍💻 **Desenvolvido por**
 
-**Livia de Souza Carvalho**  
-Entrega II — CSS3  
-Curso: **Análise e Desenvolvimento de Sistemas**  
+**Lívia de Souza Carvalho**
+Curso: **Análise e Desenvolvimento de Sistemas**
 Instituição: **Universidade Cruzeiro do Sul**
+
+---
+
+Quer que eu gere este README consolidado em um arquivo `.md` pronto para download?
