@@ -5,7 +5,7 @@
 ## 🎯 Objetivo Geral
 
 O projeto **Plataforma ONG** tem como objetivo criar uma aplicação web moderna, acessível e interativa, que conecta pessoas a causas sociais.
-Nas entregas II e III, foram aplicadas as tecnologias **CSS3** e **JavaScript Avançado** para evoluir de uma interface estática para uma **Single Page Application (SPA)** funcional.
+Nas entrega II, foi aplicada a tecnologia **CSS3** e **JavaScript Avançado** para evoluir de uma interface estática para uma **Single Page Application (SPA)** funcional.
 
 ---
 
@@ -70,7 +70,7 @@ Plataforma_ONG/
 
 ---
 
-## ⚙️ **Entrega III — JavaScript Avançado**
+## ⚙️ **Entrega II — JavaScript Avançado**
 
 ### 🔁 SPA (Single Page Application)
 
@@ -102,7 +102,7 @@ Atualização dinâmica de conteúdo sem recarregar a página, exibindo formulá
 * Cadastro e persistência de **voluntários** e **projetos** no navegador.
 * Função de limpeza e atualização automática das listas.
 
-### 🧱 Estrutura de Pastas (Entrega III)
+### 🧱 Estrutura de Pastas (Entrega II)
 
 ```
 Plataforma_ONG/
