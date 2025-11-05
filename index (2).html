@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plataforma ONG - SPA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Plataforma ONG</div>
+    <nav>
+      <a href="#/" data-link>Home</a>
+      <a href="#/projetos" data-link>Projetos</a>
+      <a href="#/cadastro" data-link>Cadastro</a>
+    </nav>
+  </header>
+  <main id="app"><!-- SPA content injected here --></main>
+  <template id="tpl-home">
+    <section class="hero">
+      <h1>Bem-vindo à Plataforma ONG</h1>
+      <p>Conectando pessoas e causas.</p>
+    </section>
+  </template>
+  <template id="tpl-projetos">
+    <section class="projetos">
+      <h2>Projetos</h2>
+      <div id="projetos-list"></div>
+      <form id="novo-projeto-form" class="card small">
+        <h3>Cadastrar novo projeto</h3>
+        <label>Nome<input name="nome" required></label>
+        <label>Descrição<textarea name="descricao" required></textarea></label>
+        <button type="submit">Salvar projeto</button>
+      </form>
+    </section>
+  </template>
+  <template id="tpl-cadastro">
+    <section class="cadastro">
+      <h2>Cadastro de Voluntário</h2>
+      <form id="cadastro-form" class="card">
+        <label>Nome completo<input name="nome" required></label>
+        <label>Email<input name="email" type="email" required></label>
+        <label>Telefone<input name="telefone" required pattern="\d{10,11}"></label>
+        <label>CPF<input name="cpf" required pattern="\d{11}"></label>
+        <div class="form-actions">
+          <button type="submit">Enviar</button>
+          <button type="button" id="limpar-dados">Limpar dados</button>
+        </div>
+      </form>
+      <div id="cadastros-list"></div>
+    </section>
+  </template>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

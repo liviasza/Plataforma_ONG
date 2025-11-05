@@ -1,0 +1,35 @@
+import {validateForm} from './validation.js';
+export const Projetos = {
+  init(){
+    window.addEventListener('view:changed', e=>{
+      if(e.detail.view==='tpl-projetos') this.mount();
+    });
+  },
+  mount(){
+    const list = document.getElementById('projetos-list');
+    const form = document.getElementById('novo-projeto-form');
+    this.load();
+    form.addEventListener('submit', ev=>{
+      ev.preventDefault();
+      if(!validateForm(form)){ this.toast('Preencha corretamente.'); return; }
+      const projeto = { nome: form.nome.value.trim(), descricao: form.descricao.value.trim(), criado: new Date().toISOString() };
+      const arr = JSON.parse(localStorage.getItem('projetos')||'[]');
+      arr.push(projeto); localStorage.setItem('projetos', JSON.stringify(arr));
+      form.reset(); this.load(); this.toast('Projeto salvo.');
+    });
+  },
+  load(){
+    const list = document.getElementById('projetos-list');
+    const arr = JSON.parse(localStorage.getItem('projetos')||'[]');
+    if(!list) return;
+    if(arr.length===0){ list.innerHTML='<p class="card">Nenhum projeto cadastrado.</p>'; return; }
+    list.innerHTML = arr.map((p,i)=>`<div class="card"><h4>${p.nome}</h4><p>${p.descricao}</p></div>`).join('');
+  },
+  toast(msg){
+    const existing = document.querySelector('.toast');
+    if(existing) existing.remove();
+    const d = document.createElement('div');
+    d.className='toast'; d.textContent=msg; document.body.appendChild(d);
+    setTimeout(()=>d.remove(),3000);
+  }
+};

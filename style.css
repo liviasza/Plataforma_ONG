@@ -1,30 +1,15 @@
-/* ==========================
-   style.css
-   ========================== */
-
-/* Importa todos os módulos CSS */
-@import url('variables.css');
-@import url('layout.css');
-@import url('components.css');
-
-/* Estilos globais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --bg:#f7f7f9; --primary:#0b5ed7; --muted:#6c757d;
+  --gap:16px; --radius:8px;
 }
-
-body {
-  font-family: var(--font-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  line-height: 1.6;
-}
-
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--color-primary-dark);
-}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial; margin:0; background:var(--bg); color:#111;}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+.card{background:#fff;padding:16px;border-radius:var(--radius);box-shadow:0 1px 4px rgba(0,0,0,0.04);margin:12px 0}
+.small{max-width:420px}
+label{display:block;margin:8px 0}
+input, textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+button{background:var(--primary);color:#fff;border:0;padding:10px 14px;border-radius:6px;cursor:pointer}
+.error{border-color:#e55353}
+.toast{position:fixed;right:16px;bottom:16px;background:#333;color:#fff;padding:10px 12px;border-radius:6px}
