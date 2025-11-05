@@ -1,9 +1,6 @@
-Perfeito 👍
-Aqui está o **README unificado**, combinando o conteúdo das entregas II (CSS3) e III (JavaScript Avançado) em um único arquivo coeso e formatado:
-
 ---
 
-# 🌐 Plataforma ONG — Entregas II e III
+# 🌐 Plataforma ONG — Entrega II 
 
 ## 🎯 Objetivo Geral
 
@@ -139,36 +136,7 @@ Plataforma_ONG/
 3. Navegue pelos menus da SPA (`Home`, `Projetos`, `Cadastro`).
 4. Os dados inseridos são salvos automaticamente no **localStorage**.
 
-💡 *Dica:* Caso queira testar em servidor local:
 
-```bash
-npx http-server
-# ou
-python -m http.server
-```
 
----
 
-## ✅ **Requisitos Atendidos**
 
-| Critério                                       | Situação |
-| ---------------------------------------------- | -------- |
-| Sistema de Design (cores, fontes, espaçamento) | ✅        |
-| Layout Responsivo (Grid e Flexbox)             | ✅        |
-| Navegação Interativa e Responsiva              | ✅        |
-| Manipulação do DOM (SPA)                       | ✅        |
-| Validação de Formulários                       | ✅        |
-| Armazenamento Local (localStorage)             | ✅        |
-| Código Modular (ES Modules)                    | ✅        |
-
----
-
-## 👩‍💻 **Desenvolvido por**
-
-**Lívia de Souza Carvalho**
-Curso: **Análise e Desenvolvimento de Sistemas**
-Instituição: **Universidade Cruzeiro do Sul**
-
----
-
-Quer que eu gere este README consolidado em um arquivo `.md` pronto para download?
