@@ -1,15 +1,1 @@
-import {router, mountRoutes} from './router.js';
-import {Templates} from './templates.js';
-import {Cadastro} from './cadastro.js';
-import {Projetos} from './projetos.js';
-
-// initialize modules
-Templates.registerTemplates(document);
-Cadastro.init();
-Projetos.init();
-mountRoutes({
-  '/': () => Templates.render('tpl-home'),
-  '/projetos': () => Templates.render('tpl-projetos'),
-  '/cadastro': () => Templates.render('tpl-cadastro')
-});
-router(); // start listening
+import {router, mountRoutes} from './router.js'; import {Templates} from './templates.js'; import {Cadastro} from './cadastro.js'; import {Projetos} from './projetos.js'; Templates.registerTemplates(document); Cadastro.init(); Projetos.init(); mountRoutes({'/': () => Templates.render('tpl-home'), '/projetos': () => Templates.render('tpl-projetos'), '/cadastro': () => Templates.render('tpl-cadastro')}); router();
